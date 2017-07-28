@@ -1,4 +1,4 @@
-// Hola variables
+// Holo variables
 float xc, yc;
 float sw, sh; // screen w and h
 float sd; // distancia
@@ -15,7 +15,7 @@ void setup() {
 
   sw = 240;
   sh = 180;
-  sd = 30;
+  sd = 80;
 
   A = new cosa(80, 80, 32, color(255, 0, 0));
   B = new cosa(80, 80, 32, color(255, 0, 0));
@@ -31,9 +31,9 @@ void draw() {
 
     translate(-sw/2, sd);
 
-    // rect
+    // el rectangulo de cada pantalla
     noFill();
-    stroke(255, 32);
+    stroke(255);
     rect(0, 0, sw, sh);
 
     /*
@@ -42,12 +42,21 @@ void draw() {
      ellipse(10, 10, 8, 8);
      */
 
+    // empieza a dibujar desde aquí
+    
+   
     A.display();
     B.display();
+    
+    
+    // hasta aquí
 
+
+    // el nombre de cada pantalla
     fill(255);
     String t = "s" + n;
     text(t, sw/2, sh/2);
+    
 
     // back
     translate(sw/2, -sd);
