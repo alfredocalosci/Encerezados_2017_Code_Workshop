@@ -8,6 +8,9 @@ class cosa {
 
   String msg, usr;
   float id;
+  
+  
+  float a;
 
   cosa(float _x, float _y, float _w, color _c) {
     w = _w;
@@ -17,6 +20,8 @@ class cosa {
 
     vx = random(-3, 3);
     vy = random(-3, 3);
+    
+    a = 0;
 
     // float _id, String _msg, String _usr
 
@@ -30,10 +35,15 @@ class cosa {
   void display() {
     fill(c);
     noStroke();
+    
+    //float ww = w + cos(a)*64;
+    
     ellipse(x, y, w, w);
 
     x += vx;
     y += vy;
+    
+   
 
     /*
     textAlign(CENTER, CENTER);
@@ -49,6 +59,6 @@ class cosa {
       vy = vy * -1;
     }
 
-    
+    a+= 0.01;
   }
 }
